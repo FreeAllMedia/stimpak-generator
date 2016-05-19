@@ -1,0 +1,19 @@
+{
+  "name": "stimpak-generator",
+  "version": "0.0.0",
+  "description": "Generate a new stimpak generator!",
+  "main": "generator.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreeAllMedia/stimpak-node-tdd.git"
+  },
+  "keywords": [
+    "stimpak",
+    "generator"
+  ],
+  "author": "dcrockwell",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0"
+  }
+}
