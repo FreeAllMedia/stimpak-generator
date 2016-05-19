@@ -1,6 +1,6 @@
 {
   "name": "stimpak-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate a new stimpak generator!",
   "main": "generator.js",
   "repository": {
