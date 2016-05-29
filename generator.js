@@ -5,12 +5,10 @@ export default class StimpakGenerator {
 	constructor(stimpak) {
 		stimpak.use(StimpakReadme);
 
-		//this.setTemplateSource(stimpak);
+		this.setTemplateSource(stimpak);
 		this.showLogo(stimpak);
-		//this.askForBasicInformation(stimpak);
-		//this.buildPackages(stimpak);
-
-		//stimpak.quote();
+		this.askForBasicInformation(stimpak);
+		this.buildPackages(stimpak);
 	}
 
 	setTemplateSource(stimpak) {
