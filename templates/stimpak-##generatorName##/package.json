@@ -5,8 +5,5 @@
   "main": "generator.js",
   "keywords": [
     "stimpak"
-  ],
-  "dependencies": {
-    "babel-preset-es2015": "^6.5.0"
-  }
+  ]
 }

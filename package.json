@@ -1,6 +1,6 @@
 {
   "name": "stimpak-generator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate a new stimpak generator!",
   "main": "generator.js",
   "repository": {
@@ -12,8 +12,5 @@
     "generator"
   ],
   "author": "dcrockwell",
-  "license": "MIT",
-  "dependencies": {
-    "babel-preset-es2015": "^6.9.0"
-  }
+  "license": "MIT"
 }
