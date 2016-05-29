@@ -5,12 +5,20 @@
   "main": "generator.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FreeAllMedia/stimpak-node-tdd.git"
+    "url": "git+https://github.com/FreeAllMedia/stimpak-generator.git"
   },
   "keywords": [
     "stimpak",
     "generator"
   ],
   "author": "dcrockwell",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "stimpak-readme": "0.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.10.2"
+  }
 }
