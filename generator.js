@@ -3,10 +3,9 @@ import StimpakReadme from "stimpak-readme";
 
 export default class StimpakGenerator {
 	constructor(stimpak) {
-		stimpak.use(StimpakReadme);
-
-		this.setTemplateSource(stimpak);
 		this.showLogo(stimpak);
+		// stimpak.use(StimpakReadme);
+		this.setTemplateSource(stimpak);
 		this.askForBasicInformation(stimpak);
 		this.buildPackages(stimpak);
 	}
@@ -33,12 +32,10 @@ export default class StimpakGenerator {
 
 	buildPackages(stimpak) {
 		stimpak
-			.then((stimpak, done) => {
-				stimpak.command(`cd stimpak-${stimpak.answers().generatorName};npm install`, (stimpak, stdout, stderr, commandDone) => {
-					commandDone();
-				});
-				done();
-			})
+			.note("Building NPM Packages. Please wait.")
+			.command(`cd stimpak-${stimpak.answers().generatorName};npm install`, (stimpak, stdout, stderr, commandDone) => {
+				commandDone();
+			});
 	}
 
 	/**

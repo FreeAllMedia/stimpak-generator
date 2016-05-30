@@ -1,6 +1,6 @@
 {
   "name": "stimpak-generator",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Generate a new stimpak generator!",
   "main": "generator.js",
   "repository": {
@@ -14,7 +14,7 @@
   "author": "dcrockwell",
   "license": "MIT",
   "dependencies": {
-    "stimpak-readme": "0.0.2"
+    "stimpak-readme": "0.0.6"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
