@@ -1,0 +1,17 @@
+BRIDGEKEEPER: Stop! Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.
+
+LANCELOT: <%= "\<%= introduction %\>" %>
+
+BRIDGEKEEPER: What... is your name?
+
+LANCELOT: <%= "\<%= name %\>" %>
+
+BRIDGEKEEPER: What... is your quest?
+
+LANCELOT: <%= "\<%= quest %\>" %>
+
+BRIDGEKEEPER: What... is your favorite color?
+
+LANCELOT: <%= "\<%= color %\>" %>
+
+LANCELOT: <%= "\<%= ending %\>" %>

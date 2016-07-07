@@ -2,8 +2,12 @@
   "name": "stimpak-<%= generatorName %>",
   "version": "0.0.0",
   "description": "<%= generatorDescription %>",
-  "main": "generator.js",
+  "main": "<%= mainFilePath %>",
   "keywords": [
     "stimpak"
-  ]
+  ],
+	"dependencies": {
+	},
+  "devDependencies": {
+	}
 }

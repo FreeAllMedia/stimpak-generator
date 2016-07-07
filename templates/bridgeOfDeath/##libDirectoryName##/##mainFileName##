@@ -1,0 +1,70 @@
+import packageJson from "./package.json";
+
+export default class StimpakBridgeOfDeath {
+	setup(stimpak) {
+		stimpak
+		.title("STOP!")
+		.prompt({
+			type: "input",
+			name: "introduction",
+			message: "BRIDGEKEEPER: Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.",
+			default: "Ask me the questions, bridgekeeper. I am not afraid."
+		}, {
+			type: "input",
+			name: "name",
+			message: "BRIDGEKEEPER: What... is your name?",
+			default: "My name is 'Sir Lancelot of Camelot'."
+		}, {
+			type: "input",
+			name: "quest",
+			message: "BRIDGEKEEPER: What... is your quest?",
+			default: "To seek the Holy Grail."
+		}, {
+			type: "list",
+			name: "color",
+			message: "BRIDGEKEEPER: What... is your favorite color?",
+			choices: ["Blue.", "Blue. No, yel-- auuuuuuuugh!"],
+			default: "Blue."
+		})
+		.then(this.renderScript)
+		.then(this.showScript);
+	}
+
+	renderScript(stimpak) {
+		let ending;
+
+		switch (stimpak.answers().color) {
+			case "Blue.":
+				ending = "BRIDGEKEEPER: Right. Off you go.";
+				break;
+			default:
+				ending = "BRIDGEKEEPER: Hee hee heh.";
+		}
+
+		stimpak
+		.answers({ ending })
+		.info(ending)
+		.render("**/*", `${__dirname}/templates`);
+	}
+
+	showScript(stimpak) {
+		stimpak
+		.prompt({
+			type: "confirm",
+			name: "printScript",
+			message: "Would you like to see your script, sire?"
+		})
+		.then(() => {
+			if (stimpak.answers().printScript) {
+				stimpak
+				.note("Your script, sire:")
+				.command("cat bridgeOfDeath.txt", this.writeScript);
+			}
+		});
+	}
+
+	writeScript(self, stdout, stderr, done) {
+		process.stdout.write(`\n${stdout}`);
+		done();
+	}
+}
