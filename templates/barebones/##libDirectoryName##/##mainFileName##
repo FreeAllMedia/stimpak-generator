@@ -1,5 +1,5 @@
 export default class Stimpak<%= generatorClassName %> {
 	setup(stimpak) {
-		// Start here
+		// stimpak.render("**/*", `${__dirname}/../<%= templatesDirectoryName %>`)
 	}
 }
