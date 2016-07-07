@@ -44,7 +44,7 @@ export default class StimpakBridgeOfDeath {
 		stimpak
 		.answers({ ending })
 		.info(ending)
-		.render("**/*", `${__dirname}/templates`);
+		.render("**/*", `${__dirname}/<%= templatesDirectoryName %>`);
 	}
 
 	showScript(stimpak) {
