@@ -1,6 +1,15 @@
 export default class Stimpak<%= generatorClassName %> {
 	setup(stimpak) {
 		stimpak
+		.prompt({
+			type: "input",
+			name: "content",
+			message: "What content would you like in the file?"
+		}, {
+			type: "confirm",
+			name: "renderTitle",
+			message: "Do you want to use a title?"
+		})
 		.render("**/*", `${__dirname}/../<%= templatesDirectoryName %>`);
 	}
 }
